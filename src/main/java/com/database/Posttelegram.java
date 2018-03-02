@@ -1,5 +1,5 @@
 package com.database;
-// Generated Feb 26, 2018 4:18:08 PM by Hibernate Tools 4.3.1
+// Generated Mar 1, 2018 1:28:15 PM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -33,12 +33,6 @@ public class Posttelegram  implements java.io.Serializable {
 	
     public Posttelegram(int idPost) {
         this.idPost = idPost;
-    }
-    
-     public Posttelegram(byte[] replyKeyboardObject) {
-        this.replyKeyboardObject = replyKeyboardObject;
-        likes =0;
-        unlikes=0;
     }
     public Posttelegram(int idPost, Integer likes, Integer unlikes, byte[] replyKeyboardObject, Set<Userlikse> userlikses) {
        this.idPost = idPost;

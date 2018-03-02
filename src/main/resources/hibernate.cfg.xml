@@ -46,5 +46,10 @@ Contributor(s):
     <property name="hibernate.connection.url">jdbc:mysql://192.168.1.236:3306/twitter01?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">12345</property>
-    </session-factory>
+    <mapping class="com.database.HibernateUtil"/>
+    <mapping class="com.database.Userlikse"/>
+    <mapping class="com.database.FactoryDataBase"/>
+    <mapping class="com.database.News"/>
+    <mapping class="com.database.Posttelegram"/>
+  </session-factory>
 </hibernate-configuration>

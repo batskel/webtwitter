@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scene Scope="Project" version="2">
     <Scope Scope="Faces Configuration Only"/>
-    <Scope Scope="Project"/>
+    <Scope Scope="Project">
+        <Node id="web/twitts.xhtml" x="586" y="167" zoom="true"/>
+        <Node id="web/recurs.xhtml" x="716" y="101" zoom="true"/>
+        <Node id="index.xhtml" x="234" y="101" zoom="false"/>
+        <Node id="templates/left.xhtml" x="105" y="251" zoom="true"/>
+        <Node id="templates/main.xhtml" x="100" y="288" zoom="true"/>
+    </Scope>
     <Scope Scope="All Faces Configurations"/>
 </Scene>

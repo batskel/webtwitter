@@ -8,22 +8,55 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <h:outputStylesheet name="/css/default.css"/>
         <h:outputStylesheet name="/css/cssLayout.css"/>
+        <h:outputStylesheet name="/css/bootstrap-grid.css" />
+        <h:outputStylesheet name="/css/bootstrap-grid.min.css" />
+        <h:outputStylesheet name="/css/bootstrap-reboot.css" />
+        <h:outputStylesheet name="/css/bootstrap-reboot.min.css" />
+        <h:outputStylesheet name="/css/bootstrap.css" />
+        <h:outputStylesheet name="/css/bootstrap.min.css" />
+
+        <h:outputStylesheet name="/js/jquery.min.js" />
+        <h:outputStylesheet name="/js/bootstrap.bundle.min.js" />
         <title>Facelets Template</title>
     </h:head>
 
     <h:body>
 
-
-        <div id="top" class="top">
-            <ui:insert name="top">Top</ui:insert>
+        <div id="top" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <ui:insert name="top">
+                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </ui:insert>
         </div>
         <div>
             <div id="left">
-                <ui:insert name="left">Left</ui:insert>
+                <ui:insert name="left">
+                    <ui:include src="/templates/left.xhtml"/>  
+                </ui:insert>
             </div>
-            <div id="content" class="left_content">
+            <div id="content" class="container">
                 <ui:insert name="content">
-                    <ui:include src="/templates/recurs.xhtml"/>
+                    <ui:include src="/web/recurs.xhtml"/>
                 </ui:insert>
             </div>
         </div>

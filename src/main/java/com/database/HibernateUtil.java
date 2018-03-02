@@ -37,11 +37,7 @@ public class HibernateUtil {
 
     public static Session getSession() {
         Session session = null;
-//        if (HibernateUtil.getSessionFactory().getCurrentSession() != null) {
-//            session = HibernateUtil.getSessionFactory().getCurrentSession();
-//        } else {
-            session = HibernateUtil.getSessionFactory().openSession();
-//        }
+        session = HibernateUtil.getSessionFactory().openSession();
         return session;
     }
 

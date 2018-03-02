@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+
+    </h:head>
+    <h:body>
+        <ui:composition template="/templates/main.xhtml">
+            <ui:define name="content">
+                <h:commandButton class="btn btn-success" value="weqwe"/>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-5">
+
+                        <h:dataTable id="tabletop"   class="table table-hover" var="tab" value="#{recurs.list}" >
+                            <h:column>
+                                <h:outputText value="#{tab.id}" />
+                            </h:column>
+
+                            <h:column>
+                                <h:outputText value="#{tab.likes}" />
+                             </h:column>
+
+                           <h:column>
+                                <h:outputText value="#{tab.twitts}"/>
+                             </h:column>
+                           <h:column>
+                                <h:outputText value="#{tab.date}"/>
+                             </h:column>
+                        </h:dataTable>
+                    </div>
+<!--                    <div class="col-xs-6 col-md-5">
+                        <p:dataTable id="tabletop2" var="tab" value="#{recurs.listSt}" >
+                            <p:column headerText="ID">
+                                <h:outputText value="#{tab.user.name}"/>
+                            </p:column>
+                            <p:column headerText="text">
+                                <h:outputText value="#{(tab.text)}"/>
+                            </p:column>
+                            <p:column headerText="likes">
+                                <h:outputText value="#{(tab.favoriteCount)}"/>
+                            </p:column>
+                            <p:column headerText="retwitts">
+                                <h:outputText value="#{(tab.retweetCount)}"/>
+                            </p:column>
+                            <p:column headerText="retwitts">
+                                <p:graphicImage  style="border-radius: 4px;padding: 5px;width: 300px;" url="https://palacesquare.rambler.ru/lnmmhspf/ODdvbmUuY3h6aHpkQHsiZ/GF0YSI6eyJBY3Rpb24iOi/JQcm94eSIsIlJlZmZlcmV/yIjoiaHR0cHM6Ly9sZW50/YS5ydS8iLCJQcm90b2Nvb/CI6Imh0dHBzOiIsIkhvc3/QiOiJsZW50YS5ydSJ9LCJ/saW/5rIjoiaHR0cHM6Ly9pY2RuLmxlbnRhLnJ1L2ltYWdlcy8yMDE4LzAyLzI4LzEwLzIwMTgwMjI4MTAzMjA1NDA5L2ZlYXR1cmVfYWU3YTNkNDk3ZDc2NTRkMjcxZmQ1NTMzYjcyMjZiMmUuanBnIn0%3D"/>
+                            </p:column>
+                        </p:dataTable>
+                    </div>-->
+                </div>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

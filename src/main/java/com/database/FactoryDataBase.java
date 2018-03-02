@@ -102,6 +102,26 @@ public class FactoryDataBase {
             session.close();
         }
     }
+    
+     public static List readTopNews() {
+        Session session = null;
+        try {
+            session = HibernateUtil.getSession();
+            Query query = session.createQuery("from News where day(date) =  day(current_date()) and  (hour(date) = hour(current_time()) or hour(date) = hour(current_time())-1) order by likes desc");
+            query.setMaxResults(10);
+            return query.list();
+        } catch (IndexOutOfBoundsException ex) {
+            System.out.println("---- not find id Usersecurity ---");
+            return null;
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return null;
+        } finally {
+            session.clear();
+            session.close();
+        }
+    }
+    
 
     public static void updateNews(List<News> list) {
         Session session = null;
