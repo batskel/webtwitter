@@ -16,7 +16,8 @@ public class CounterView implements Serializable {
     private int number;
 
     public int getNumber() {
-        return number;
+        
+        return number+1;
     }
 
     public void increment() {
